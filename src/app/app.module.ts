@@ -2,12 +2,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 
+import { MomentModule } from 'angular2-moment';
+
 import { AppComponent } from './components/app/app.component';
 import { BalanceComponent } from './components/balance/balance.component';
 import { DepositComponent } from './components/deposit/deposit.component';
+import { TransactionListComponent } from './components/transaction-list/transaction-list.component';
 
 import {TransactionsService} from './services/transactions.service';
-import { TransactionListComponent } from './components/transaction-list/transaction-list.component';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +21,8 @@ import { TransactionListComponent } from './components/transaction-list/transact
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    MomentModule
   ],
   providers: [
     TransactionsService
