@@ -1,7 +1,8 @@
 export class Transaction {
-    Date: Date;
-    Amount: number;
-    DepositMadeBy: string;
+
+    readonly Date: Date;
+    readonly Amount: number;
+    readonly DepositMadeBy: string;
 
     constructor(amount: number, depositMadeBy: string) {
         this.Date = new Date();
