@@ -1,13 +1,17 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { TransactionsService } from './../../services/transactions.service';
 import { Observable, Subscription } from 'rxjs';
+import { Transaction } from './../../types/transaction';
 
 @Component({
   selector: 'app-transaction-list',
   template: `
   <p>Transactions for this account</p>
   <ul>
-    <li *ngFor="let item of transactions">{{item}}</li>
+    <li *ngFor="let item of transactions">
+      {{item.Date}} - 
+      $ {{item.Amount}} : {{item.DepositMadeBy}}
+    </li>
   </ul>
   `,
   encapsulation: ViewEncapsulation.None
@@ -18,7 +22,7 @@ export class TransactionListComponent implements OnInit {
   private _subscription: Subscription;
   
   //  Property used to present the transactions on-screen
-  transactions: number[];
+  transactions: Transaction[];
 
   constructor(private TransactionsService: TransactionsService) { }
 
