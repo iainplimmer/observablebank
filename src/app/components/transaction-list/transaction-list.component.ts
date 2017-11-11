@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { TransactionsService } from './../services/transactions.service';
+import { TransactionsService } from './../../services/transactions.service';
 import { Observable, Subscription } from 'rxjs';
 
 @Component({

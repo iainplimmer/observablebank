@@ -7,7 +7,7 @@ import { BalanceComponent } from './components/balance/balance.component';
 import { DepositComponent } from './components/deposit/deposit.component';
 
 import {TransactionsService} from './services/transactions.service';
-import { TransactionListComponent } from './transaction-list/transaction-list.component';
+import { TransactionListComponent } from './components/transaction-list/transaction-list.component';
 
 @NgModule({
   declarations: [
