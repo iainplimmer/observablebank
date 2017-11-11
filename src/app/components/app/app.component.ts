@@ -4,7 +4,9 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-root',
   template: `
-  <h3>{{title}}</h3>
+  <mat-toolbar>
+    <mat-toolbar-row>{{title}}</mat-toolbar-row>
+  </mat-toolbar>
   <app-balance></app-balance>
   <app-deposit></app-deposit>
   <app-transaction-list></app-transaction-list>
