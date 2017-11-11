@@ -9,7 +9,7 @@ import { Transaction } from './../../types/transaction';
   <p>Transactions for this account</p>
   <ul>
     <li *ngFor="let item of transactions">
-      {{item.Date | amDateFormat: 'DD-MM-YYYY, HH:mm:ss'}} - 
+      {{item.Date | date:'dd MMM yyyy, HH:mm:ss' }} - 
       $ {{item.Amount}} : {{item.DepositMadeBy}}
     </li>
   </ul>
