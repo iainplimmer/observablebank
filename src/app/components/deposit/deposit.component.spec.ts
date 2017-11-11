@@ -1,6 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
 
 import { DepositComponent } from './deposit.component';
+
+import {TransactionsService} from './../../services/transactions.service';
+
 
 describe('DepositComponent', () => {
   let component: DepositComponent;
@@ -8,7 +12,15 @@ describe('DepositComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DepositComponent ]
+      imports: [
+        FormsModule
+      ],
+      providers: [
+        TransactionsService
+      ],
+      declarations: [ 
+        DepositComponent 
+      ]
     })
     .compileComponents();
   }));

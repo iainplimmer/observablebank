@@ -2,13 +2,16 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { BalanceComponent } from './balance.component';
 
+import { TransactionsService } from './../../services/transactions.service';
+
 describe('BalanceComponent', () => {
   let component: BalanceComponent;
   let fixture: ComponentFixture<BalanceComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BalanceComponent ]
+      declarations: [ BalanceComponent ],
+      providers: [TransactionsService]
     })
     .compileComponents();
   }));

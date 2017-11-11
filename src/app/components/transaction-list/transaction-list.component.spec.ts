@@ -1,5 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
+import {TransactionsService} from './../../services/transactions.service';
+
 import { TransactionListComponent } from './transaction-list.component';
 
 describe('TransactionListComponent', () => {
@@ -8,7 +10,10 @@ describe('TransactionListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TransactionListComponent ]
+      declarations: [ TransactionListComponent ],
+      providers: [
+        TransactionsService
+      ],
     })
     .compileComponents();
   }));
