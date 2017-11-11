@@ -4,14 +4,18 @@ import { NgIf } from '@angular/common';
 import {TransactionsService} from './../../services/transactions.service';
 import { isNumeric } from 'rxjs/util/isNumeric';
 
-
 @Component({
   selector: 'app-deposit',
   template: `
   <div *ngIf="depositError">There is a error with the amount that we deposited!</div>  
   <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
-    Deposit: <input name="transaction" ngModel required #transaction="ngModel" type="number">
-    <button *ngIf="f.valid">Deposit Amount</button>
+  
+    <mat-form-field class="example-full-width">
+      <input placeholder="Deposit Amount" name="transaction" matInput ngModel required #transaction="ngModel" type="number"> 
+    </mat-form-field>
+    <button mat-raised-button *ngIf="f.valid">Deposit Amount</button>
+  
+  
   </form>
   `,
   encapsulation: ViewEncapsulation.None

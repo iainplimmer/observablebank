@@ -6,13 +6,15 @@ import { Transaction } from './../../types/transaction';
 @Component({
   selector: 'app-transaction-list',
   template: `
-  <p>Transactions for this account</p>
-  <ul>
-    <li *ngFor="let item of transactions">
+  <mat-toolbar>
+    <mat-toolbar-row>Transactions for this account</mat-toolbar-row>
+  </mat-toolbar>
+  <mat-list>
+    <mat-list-item *ngFor="let item of transactions">
       {{item.Date | date:'dd MMM yyyy, HH:mm:ss' }} - 
       $ {{item.Amount}} : {{item.DepositMadeBy}}
-    </li>
-  </ul>
+    </mat-list-item>
+  </mat-list>
   `,
   encapsulation: ViewEncapsulation.None
 })
